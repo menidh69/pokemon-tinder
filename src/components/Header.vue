@@ -14,9 +14,11 @@
         <router-link to="/super-liked">SuperLiked</router-link>
       </div>
       <div>
-        <router-link to="/login" class="login" v-if="!isLoggedIn"
-          >Log In</router-link
-        >
+        <div v-if="!isLoggedIn">
+          <router-link to="/login" class="login">Log In</router-link>
+          |
+          <router-link to="/signup" class="login">Sign Up</router-link>
+        </div>
         <div v-if="userData">
           <router-link to="/#" class="flex flex-row align-center">
             <img

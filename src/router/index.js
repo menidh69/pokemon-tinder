@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Login from '../views/Login.vue';
+import SignUp from '../views/SignUp.vue';
 import Error404 from '../views/Error404.vue';
 import Admin from '../views/Admin.vue';
+import Login from '../views/Login.vue';
 import UnAuthorized from '../views/UnAuthorized.vue';
 import Roles from './roles';
 import store from '../store';
@@ -34,6 +35,11 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
+  },
+  {
+    path: '/signup',
+    name: 'SignUp',
+    component: SignUp,
   },
   {
     path: '/login',
