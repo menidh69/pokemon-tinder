@@ -61,7 +61,7 @@ export default {
     async onSave() {
       const isFormCorrect = await this.v$.$validate();
       if (!isFormCorrect) return;
-      this.logIn({ name: this.name, email: this.email });
+      this.logIn({ name: 'Ash Ketchum', email: this.email });
       console.log('saving');
       this.$router.push('/');
       // this.$emit('onError');

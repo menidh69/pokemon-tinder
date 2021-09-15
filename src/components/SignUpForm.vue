@@ -64,6 +64,7 @@
             <div v-for="type in types" :key="type.name" class="input-pair">
               <input
                 type="checkbox"
+                class="checkbox-input"
                 :id="type.name"
                 :value="type.name"
                 v-model="v$.categories.$model"
@@ -159,6 +160,9 @@ button {
 .error {
   color: red;
   font-weight: bold;
+}
+.checkbox-input {
+  accent-color: yellow;
 }
 
 .input-pair {

@@ -5,6 +5,7 @@ import SignUp from '../views/SignUp.vue';
 import Error404 from '../views/Error404.vue';
 import Admin from '../views/Admin.vue';
 import Login from '../views/Login.vue';
+import Profile from '../views/Profile.vue';
 import UnAuthorized from '../views/UnAuthorized.vue';
 import Roles from './roles';
 import store from '../store';
@@ -32,6 +33,14 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
     meta: {
       requiresAuth: true,
     },

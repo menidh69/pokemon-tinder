@@ -20,7 +20,7 @@
           <router-link to="/signup" class="login">Sign Up</router-link>
         </div>
         <div v-if="userData">
-          <router-link to="/#" class="flex flex-row align-center">
+          <router-link to="/profile" class="flex flex-row align-center">
             <img
               :src="userData.profileImg"
               width="35px"
